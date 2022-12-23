@@ -1,0 +1,169 @@
+:root {
+  --body-bg-color: #121214;
+  --text-color: #e1e1e6;
+  --title-color: #04d361;
+  --form-color: #a8a8a8;
+  --bg-button-color: #8257e5;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "League Spartan", sans-serif;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+section {
+  background-color: var(--body-bg-color);
+  padding-top: 2rem;
+  padding-left: 2rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  overflow-x: visible;
+  gap: 1rem;
+  width: 120%;
+}
+
+#email {
+  position: relative;
+  width: 90%;
+  border: 0;
+  border-radius: 0;
+  outline: 0;
+}
+
+.inputs:before {
+  position: relative;
+  content: "";
+  width: 8px;
+  top: 0px;
+  background-color: var(--title-color);
+  color: var(--title-color);
+}
+
+#email:focus {
+  outline: 1px solid var(--bg-button-color);
+}
+
+#read-news {
+  height: 100vh;
+  width: 100%;
+}
+
+#logo {
+  width: 50%;
+}
+
+#submit-btn {
+  position: relative;
+  background-color: var(--bg-button-color);
+  outline: none;
+  border: none;
+  padding-inline: 8px;
+  box-shadow: 6px 6px 6px var(--body-bg-color);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#submit-btn img {
+  filter: brightness(0) invert(1);
+}
+
+.inputs {
+  display: flex;
+  width: 100%;
+}
+
+.call-to-action {
+  margin-top: 2rem;
+}
+
+.right-arrow {
+  display: inline-block;
+  background-image: url("../assets/arrow-right.svg");
+  background-size: cover;
+  height: 1em;
+  width: 1em;
+  filter: brightness(0) invert(1);
+  translate: 0 25%;
+  filter: invert(47%) sepia(34%) saturate(7490%) hue-rotate(236deg)
+    brightness(91%) contrast(96%);
+}
+
+.read-fst:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.read-fst:hover .right-arrow {
+  animation: pump-right 400ms infinite;
+}
+
+/* utilities */
+
+.title-color {
+  color: var(--title-color);
+}
+.text-color {
+  color: var(--text-color);
+}
+.form-color {
+  color: var(--form-color);
+}
+
+.btn-color {
+  color: var(--bg-button-color);
+}
+
+.heading-font {
+  font-family: "Work Sans", sans-serif;
+}
+
+.py-2 {
+  padding-block: 1rem;
+}
+.px-2 {
+  padding-inline: 1rem;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.text-2xl {
+  font-size: 2rem;
+}
+
+.text-xl {
+  font-size: 1.5rem;
+}
+
+.text-big {
+  font-size: 1.25rem;
+}
+
+.relaxed {
+  line-height: 1.25rem;
+}
+
+/* animations */
+
+@keyframes pump-right {
+  0% {
+    translate: 0 25%;
+  }
+  50% {
+    translate: 50% 25%;
+  }
+  100% {
+    translate: 0 25%;
+  }
+}
