@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+:root {
+  --body-bg-color: #dce4e3;
+  --green: #18c29c;
+  --light-green: #8ed7c6;
+  --light-grey: #dce4e3;
+  --text-color: #084236;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+}
+
+main {
+  font-size: 1.25rem;
+  padding: 1rem;
+  background-color: var(--body-bg-color);
+  width: 100%;
+  color: var(--text-color);
+}
+
+body {
+  display: flex;
+}
+
+#sidebar {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1rem;
+  background-color: var(--green);
+  color: var(--text-color);
+  height: 100vh;
+  gap: 1rem;
+  width: 20rem;
+  transition: all 300ms ease-in-out;
+}
+#sidebar[data-collapsed] {
+  width: 4rem;
+}
+
+#profile-data {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: all 300ms ease;
+  white-space: nowrap;
+}
+
+#profile-pic {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 5px;
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  margin-inline: 1rem;
+  padding-inline: 0.25rem;
+  padding-block: 0.25rem;
+  width: 16rem;
+
+  border-radius: 10px;
+  transition: all 300ms ease-in-out;
+}
+
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-inline: 1rem;
+}
+
+#menu {
+  cursor: pointer;
+}
+
+.hide {
+  opacity: 0;
+  width: 0;
+  transition: all 300ms ease-in-out;
+}
+.show {
+  opacity: 1;
+  width: auto;
+  transition: all 300ms ease-in-out;
+}
+
+.selected {
+  background-color: var(--light-green);
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 5px;
+  padding-inline: 0.25rem;
+  margin-right: 0.5rem;
+  transition: width 200ms ease;
+}
+
+.sidebar-items {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  height: 100%;
+}
+
+.logout {
+  background-color: var(--light-green);
+  margin-inline: 0;
+  border-radius: 0;
+  width: 100%;
+  height: 3rem;
+  margin-top: auto;
+  margin-bottom: 0;
+  justify-content: space-between;
+  padding-inline: 1rem;
+  overflow: hidden;
+}
+
+.collapsed {
+  width: 2.5rem;
+  overflow-x: hidden;
+}
+
+.font-normal {
+  font-weight: 400;
+}
+.font-md {
+  font-weight: 500;
+}

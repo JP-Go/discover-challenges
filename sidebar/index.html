@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Sidebar</title>
+  </head>
+  <body>
+    <nav id="sidebar" data-collapsed>
+      <div class="logo-wrapper">
+        <img src="/assets/images/logo.svg" id="logo" alt="logo" class="hide" />
+        <img src="/assets/images/menu.svg" id="menu" alt="menu" class="icon" />
+      </div>
+      <ul class="sidebar-items">
+        <li class="sidebar-item selected collapsed">
+          <img src="/assets/images/search.svg" class="icon" />
+          <span class="item-description">Buscar</span>
+        </li>
+        <li class="sidebar-item collapsed">
+          <img src="/assets/images/grid.svg" class="icon" />
+          <span class="item-description">Dashboard</span>
+        </li>
+        <li class="sidebar-item collapsed">
+          <img src="/assets/images/pet.svg" class="icon" />
+          <span class="item-description">Pets</span>
+        </li>
+        <li class="sidebar-item collapsed">
+          <img src="/assets/images/user.svg" class="icon" />
+          <span class="item-description">Clientes</span>
+        </li>
+        <li class="sidebar-item collapsed">
+          <img src="/assets/images/vet.svg" class="icon" />
+          <span class="item-description">Vets</span>
+        </li>
+        <li class="sidebar-item collapsed">
+          <img src="/assets/images/settings.svg" class="icon" />
+          <span class="item-description">Ajustes</span>
+        </li>
+        <li class="sidebar-item logout">
+          <div id="profile-data" class="hide">
+            <img
+              src="/assets/images/photo.jpg"
+              alt="profile pic"
+              id="profile-pic"
+            />
+            <div>
+              <span class="font-md">Eleanor Pena</span> <br />
+              <span>Veterinária</span>
+            </div>
+          </div>
+          <img src="/assets/images/log-out.svg" class="icon" />
+        </li>
+      </ul>
+    </nav>
+    <main class="font-md">Dashboard</main>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
